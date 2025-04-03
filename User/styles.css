@@ -1,0 +1,761 @@
+/* General Styles */
+body {
+    padding-top: 50px;
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+
+}
+
+h2,
+h4,
+h5 {
+    color: #007bff;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+    text-decoration: none;
+}
+
+section {
+    scroll-margin-top: 70px;
+    /* Adjust based on your navbar height */
+}
+
+.container {
+    max-width: 1200px;
+}
+
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 5vw;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin-right: 20px;
+}
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+/* Home Section Styles */
+#home {
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212; /* Dark background for contrast */
+    text-align: center;
+}
+
+/* Heading with typing effect */
+#home h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    width: fit-content;
+    margin-left: -0.5vw;
+    animation: typing 10s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+/* Typing Effect - Pause for 30s before restarting */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 90%; /* Full width */
+    }
+    90% {
+        width: 90%; /* Hold the full text */
+    }
+    100% {
+        width: 0; /* Reset to start again */
+    }
+}
+
+/* Cursor blinking effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+/* Paragraph styling */
+#home p {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+/* Download CV Button */
+#home .btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#home .btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+/* Profile Image */
+#home img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* About Section Styles */
+#about {
+    min-height: 90vh;
+    width: 100%;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+#about p {
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.about-layout {
+    display: flex;
+    justify-content: space-between;
+    /* Adjusted to space out sections */
+    align-items: flex-start;
+    gap: 50px;
+    /* Spacing between sections */
+    flex-wrap: wrap;
+}
+
+.intro-section {
+    flex: 0 0 55%;
+    /* 55% width for the introduction section */
+    max-width: 50%;
+}
+
+.education-section {
+    flex: 4 0 35%;
+    /* 35% width for the education section */
+    max-width: 40%;
+}
+
+.education-timeline {
+    border-left: 2px solid #ffffff;
+    position: relative;
+    padding-left: 20px;
+    /* Added padding to match circle position */
+}
+
+.education-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.education-item .circle {
+    position: absolute;
+    left: -26px;
+    /* Slight adjustment for better alignment */
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #aea8a8;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.education-item h5 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.education-item p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Skills Section */
+#skills {
+    margin-top: -5vh;
+    min-height: 100vh;
+    /* Adjust this if needed */
+}
+
+
+/* Styling for Skill Cards */
+.skill-card {
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-name {
+    color: antiquewhite;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card .card-body {
+    padding: 20px;
+}
+
+.skill-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Rating Styling */
+.rating {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f0ad4e;
+    /* Orange color to represent a rating */
+    margin-top: 10px;
+}
+
+
+/* Projects Section */
+/* Projects Section */
+#projects {
+    min-height: 100vh;
+}
+
+#projects .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#projects .cardsize {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65vh;
+    /* Ensuring card has enough space */
+    border: 1px solid #ddd;
+    /* Add border to card */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 20px;
+}
+
+#projects .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /* Full height for content inside the card */
+}
+
+#projects .card-title {
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    flex-grow: 0.5;
+    /* Allow the title to take space as needed */
+    text-align: center;
+}
+
+#projects .card-text {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: justify;
+    /* Adding some margin at the bottom */
+}
+
+#projects .btn-primary {
+    margin-top: auto;
+    /* Push button to the bottom of the card */
+    align-self: center;
+    /* Center the button horizontally */
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#projects .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Custom styling for the container and row */
+#projectsRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#moreproject {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* More Projects Button Styling */
+#moreproject a {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#moreproject a:hover {
+    background-color: #0056b3;
+}
+
+
+/* Experience Section */
+#experience {
+    min-height: 82vh;
+}
+
+#experience h5 {
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+#experience li {
+    font-size: 1rem;
+    color: #000000;
+    text-align: justify;
+}
+
+/* Center the timeline content */
+.timeline-content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
+    gap: 15px;
+    /* Add spacing between timeline items */
+}
+
+/* Timeline Item (Card) Styling */
+/* Experience Card - Fixed Size */
+.timeline-item {
+    display: none;
+    width: 70vw;
+    height: 55vh; /* Fixed height */
+    min-height: 55vh; /* Prevent shrinking */
+    max-height: 55vh; /* Prevent growing */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: scale(0.9);
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content fits inside */
+    overflow: hidden; /* Prevents content overflow */
+}
+
+/* Ensure the description inside stays within fixed height */
+.timeline-item ul {
+    flex-grow: 1; /* Allows list to fill space */
+    overflow-y: auto; /* Enables scrolling if needed */
+    margin: 0;
+    padding-left: 20px;
+    max-height: 38vh; /* Restrict content height */
+}
+
+/* Make Active Card Visible */
+.timeline-item.active {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Timeline Buttons */
+.timeline-years .btn {
+    transition: all 0.3s ease;
+}
+
+.timeline-years .btn.active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+}
+
+/* Contact Section */
+#contact {
+    min-height: 85vh;
+}
+
+#contact form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.858);
+}
+
+#contact .form-label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+}
+
+#contact .form-control {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#contact .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+#contact .btn:hover {
+    background-color: #0056b3;
+}
+
+.social-media a {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.social-media .btn i {
+    margin-right: 5px;
+}
+
+/* Social Media Buttons Styling */
+.social-media a:hover {
+    opacity: 0.8;
+}
+
+/* Footer Section */
+footer {
+    background-color: #212529;
+    color: #fff;
+    height: 5vh;
+}
+
+
+/* Mobile View - Stacking skills vertically */
+
+@media (max-width: 768px) {
+
+    #home img {
+        margin-bottom: 1rem;
+    }
+
+    #about h2 {
+        font-size: 1.75rem;
+    }
+
+    #about p {
+        font-size: 1.05rem;
+        text-align: left;
+    }
+
+    .about-layout {
+        flex-direction: column;
+        /* Stack sections vertically for tablets */
+        align-items: flex-start;
+    }
+
+    .intro-section,
+    .education-section {
+        flex: 0 0 100%;
+        /* Sections take full width */
+        max-width: 100%;
+        margin-left: 2vw;
+    }
+
+    .education-timeline {
+        border-left: 2px solid #ffffff;
+    }
+
+    .education-item .circle {
+        left: -26px;
+    }
+
+    .education-item h5 {
+        font-size: 1.15rem;
+    }
+
+    /* Ensure the table takes up full width */
+    .card {
+        min-height: 85vh;
+        overflow-y: scroll;
+        margin-left: inherit;
+    }
+
+    #skills .card {
+        min-height: 85vh;
+    }
+
+    .table {
+        width: 100%;
+        display: block;
+    }
+
+    /* Make table rows stack vertically */
+    .table td {
+        width: 130% !important;
+        /* Ensure full-width cells */
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        /* Center the text */
+        padding: 10px;
+        box-sizing: border-box;
+        /* Prevent overflow */
+    }
+
+    .d-flex {
+        flex-direction: column;
+        /* Stack elements vertically */
+        justify-content: center;
+        /* Center the content */
+    }
+
+    .stars {
+        margin-top: 10px;
+        /* Space between skill text and stars */
+    }
+
+    .card-body {
+        padding: 10px;
+        /* Reduce card padding for mobile */
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        /* Adjust title font size */
+    }
+
+    /* Adjust individual cells for better mobile display */
+    .table td .d-flex {
+        justify-content: center;
+    }
+
+    #projects {
+        margin-top: -8vh;
+    }
+
+    .card {
+        min-height: 70vh;
+    }
+
+    .cardsize {
+        height: 70vh;
+    }
+
+    #timelinecenter {
+        margin-left: 5vw;
+    }
+
+    #experience {
+        text-align: left;
+    }
+
+    .social-media a {
+        margin: 10px 5px;
+        display: inline-block;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        /* Stack social media section below the form */
+    }
+
+    .contactsize {
+        width: 100%;
+        /* Ensure form and social media occupy full width */
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@media (max-width: 568px) {
+
+    #home img {
+        margin-bottom: 1rem;
+    }
+
+    #about h2 {
+        font-size: 1.5rem;
+        /* Smaller font size for headings */
+    }
+
+    #about p {
+        font-size: 0.95rem;
+        text-align: justify;
+        /* Adjust paragraph font size */
+    }
+
+    .about-layout {
+        flex-direction: column;
+        /* Stack sections vertically */
+        align-items: flex-start;
+        gap: 10px;
+        /* Add spacing between sections */
+    }
+
+    .intro-section,
+    .education-section {
+        flex: 0 0 100%;
+        /* Sections take full width */
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 10px;
+        /* Add some padding for better spacing */
+    }
+
+    .education-timeline {
+        border-left: 1px solid #ffffff;
+        /* Adjust timeline width */
+    }
+
+    .education-item .circle {
+        left: -26px;
+        /* Reposition timeline circles */
+    }
+
+    .education-item h5 {
+        font-size: 1rem;
+        /* Adjust timeline item font size */
+    }
+
+    .card {
+        min-height: 55vh;
+        /* Adjust card height */
+        overflow-y: auto;
+        /* Scrollable content for smaller screens */
+    }
+
+    #skills .card {
+        min-height: 15vh;
+    }
+
+    .table {
+        width: 100%;
+        /* Table takes full width */
+        display: block;
+    }
+
+    .table td {
+        display: block;
+        /* Stack table rows vertically */
+        text-align: left;
+        /* Align text for better readability */
+        padding: 8px;
+        /* Reduce padding */
+    }
+
+    .d-flex {
+        flex-direction: column;
+        /* Stack elements vertically */
+        justify-content: flex-start;
+        /* Align content to top */
+    }
+
+    .stars {
+        margin-top: 5px;
+        /* Reduce spacing */
+    }
+
+    .card-body {
+        padding: 8px;
+        /* Smaller padding */
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        /* Adjust title size */
+    }
+
+    #projects {
+        margin-top: -5vh;
+        /* Adjust margin for projects */
+    }
+
+    .cardsize {
+        height: 60vh;
+    }
+
+    #experience li {
+        text-align: justify;
+    }
+
+    #experience .card {
+        width: 93vw;
+    }
+
+    .social-media a {
+        margin: 8px 3px;
+        /* Adjust spacing for icons */
+        font-size: 0.9rem;
+        /* Smaller icon size */
+    }
+
+    .row {
+        flex-direction: column-reverse;
+        /* Stack social media below form */
+    }
+
+    .contactsize {
+        width: 100%;
+        /* Full-width for contact form */
+        margin-bottom: 15px;
+        /* Reduce bottom margin */
+        padding: 0 10px;
+        /* Add padding */
+    }
+}

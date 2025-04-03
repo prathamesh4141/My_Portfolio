@@ -1,0 +1,93 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0f0f0f; /* Dark background */
+    color: #ffffff;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Centered Container */
+.container {
+    width: 100%;
+    max-width: 420px;
+    background-color: #1c1c1c; /* Dark card background */
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+/* Form headings */
+h3 {
+    color: #4caf50; /* Green heading */
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* Form groups for better spacing */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Label styles */
+label {
+    font-weight: 600;
+    color: #ccc;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+/* Input styles */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #4caf50; /* Border with a green accent */
+    border-radius: 8px;
+    background-color: #252525;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #00e676;
+    outline: none;
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50; /* Green button */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #388e3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}

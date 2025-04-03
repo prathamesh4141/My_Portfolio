@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="CSS/AdminDashboard.css">
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-brand" id="navname"></div>
+        <button type="button" id="logoutBtn">Logout</button>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Button Section -->
+        <section class="btn-section">
+            <h2 class="text-center">Admin Dashboard</h2>
+            <div class="btn-container">
+                <button class="btn-dashboard" data-page="home">Home</button>
+                <button class="btn-dashboard" data-page="about">About</button>
+                <button class="btn-dashboard" data-page="skills">Skills</button>
+                <button class="btn-dashboard" data-page="project">Project</button>
+                <button class="btn-dashboard" data-page="experience">Experience</button>
+                <button class="btn-dashboard" data-page="contact">Contact</button>
+                <button class="btn-dashboard" data-page="maildata">Mail Data</button>
+            </div>
+        </section>
+
+        <!-- Form Load Container -->
+        <section id="content" class="form-container"></section>
+    </div>
+
+    <!-- JavaScript for Dynamic Loading -->
+    <script type="module" src="Js/admindashboard.js"></script>
+</body>
+
+</html>
